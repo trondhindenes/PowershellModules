@@ -37,7 +37,7 @@ Function Create-AwsRoute53Record
 
     Begin 
     {
-        $route53client = New-Object Amazon.Route53.AmazonRoute53Client -ArgumentList $creds,$region
+        $route53client = New-Object Amazon.Route53.AmazonRoute53Client -ArgumentList $credentials,$region
     }
 
     Process

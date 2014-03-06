@@ -21,7 +21,7 @@ Function Get-AwsRoute53Zone
     if (!($ZoneName.EndsWith(".")) -and $ZoneName)
         {$ZoneName += "."}
 
-    $route53client = New-Object Amazon.Route53.AmazonRoute53Client -ArgumentList $creds,$region
+    $route53client = New-Object Amazon.Route53.AmazonRoute53Client -ArgumentList $credentials,$region
 
     $hostedZones = $route53client.ListHostedZones()
     $zone = $hostedZones.HostedZones
@@ -69,7 +69,7 @@ Function Get-AwsRoute53Record
     Begin {}
     Process
     {
-        $route53client = New-Object Amazon.Route53.AmazonRoute53Client -ArgumentList $creds,$region
+        $route53client = New-Object Amazon.Route53.AmazonRoute53Client -ArgumentList $credentials,$region
         $ZonesRequest = New-Object -TypeName Amazon.Route53.Model.ListResourceRecordSetsRequest
         Write-verbose "Retrieving records for zone $($zone.id) using region $region"
         $ZonesRequest.HostedzoneId = $zone.Id
