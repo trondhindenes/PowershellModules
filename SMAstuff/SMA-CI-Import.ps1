@@ -2,7 +2,7 @@
     [String]$environmentName = "Default",
     [String]$RootFolder = "C:\Scripts\SMA-CI",
     [string]$Operation = "ExportToSMA",
-    [string]$ArtifactType = "variable"
+    [string]$ArtifactType = "runbook"
 )
 
 $VerbosePreference = "Continue"
