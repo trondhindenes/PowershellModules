@@ -228,8 +228,8 @@ Function Publish-SSRSReportsDirectory
                 $ReportFullname = $report.FullName
                 $TargetFolder = $report.TargetFolder
 
-                Write-Verbose "Deploy-SSRSReport -webServiceUrl $webServiceUrl -rdlFile $ReportFullname -reportFolder $TargetFolder -force -Credentials $Credentials"
-                Deploy-SSRSReport -webServiceUrl $webServiceUrl -rdlFile $ReportFullname -reportFolder $TargetFolder -force $true -Credentials $Credentials
+                Write-Verbose "Publish-SSRSReport -webServiceUrl $webServiceUrl -rdlFile $ReportFullname -reportFolder $TargetFolder -force -Credentials $Credentials"
+                Publish-SSRSReport -webServiceUrl $webServiceUrl -rdlFile $ReportFullname -reportFolder $TargetFolder -force $true -Credentials $Credentials
                 
 
             }
